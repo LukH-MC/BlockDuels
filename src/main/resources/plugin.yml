@@ -1,0 +1,5 @@
+name: BlockDuels
+version: '1.0-PREVIEW'
+main: lukh.blockDuels.Main
+api-version: '1.21'
+authors: [ Luk_H ]
