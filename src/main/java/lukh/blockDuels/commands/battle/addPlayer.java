@@ -1,7 +1,6 @@
 package lukh.blockDuels.commands.battle;
 
 import lukh.blockDuels.game.Game;
-import lukh.blockDuels.game.GamePlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -25,7 +24,7 @@ public class addPlayer implements CommandExecutor {
             return false;
         }
         else {
-            if (!Bukkit.getPlayer(args[0]).isConnected()) {
+            if (!Objects.requireNonNull(Bukkit.getPlayer(args[0])).isConnected()) {//No Nullpointer possible due to above statement
                 sender.sendMessage(Color.red + "Player is not online!");
                 return false;
             }
@@ -42,12 +41,12 @@ public class addPlayer implements CommandExecutor {
             return false;
         }
         if (Game.playerCount == 0) {
-            Game.player1 = new GamePlayer(Bukkit.getPlayer(args[0]));
+            Game.player1.setPlayer(Bukkit.getPlayer(args[0]));
             sender.sendMessage(Color.green + "Player " + Objects.requireNonNull(Bukkit.getPlayer(args[0])).getName() + " added!");
             Game.playerCount++;
         }
         if (Game.playerCount == 1) {
-            Game.player2 = new GamePlayer(Bukkit.getPlayer(args[0]));
+            Game.player2.setPlayer(Bukkit.getPlayer(args[0]));
             sender.sendMessage(Color.green + "Player " + Objects.requireNonNull(Bukkit.getPlayer(args[0])).getName() + " added!");
             Game.playerCount++;
         }

@@ -3,3 +3,10 @@ version: '1.0-PREVIEW'
 main: lukh.blockDuels.Main
 api-version: '1.21'
 authors: [ Luk_H ]
+commands:
+  addPlayer:
+    description: "Add a player to the next duel"
+  removePlayer:
+    description: "Remove a player from the next duel"
+  listPlayers:
+    description: "Lists all Players enrolled in next duel or in current duel."

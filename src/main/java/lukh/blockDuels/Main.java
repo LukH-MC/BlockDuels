@@ -1,11 +1,15 @@
 package lukh.blockDuels;
 
+import lukh.blockDuels.commands.battle.addPlayer;
+import lukh.blockDuels.commands.battle.listPlayers;
+import lukh.blockDuels.commands.battle.removePlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
+@SuppressWarnings("UnstableApiUsage")
 public final class Main extends JavaPlugin {
 
     @Override
@@ -15,7 +19,9 @@ public final class Main extends JavaPlugin {
 
 
         //imports
-        newCommand("addPlayer", addPlayer);
+        newCommand("addPlayer", new addPlayer());
+        newCommand("removePlayer", new removePlayer());
+        newCommand("listPlayers", new listPlayers());
     }
 
     @Override

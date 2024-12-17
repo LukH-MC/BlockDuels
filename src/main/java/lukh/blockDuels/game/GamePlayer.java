@@ -3,15 +3,12 @@ package lukh.blockDuels.game;
 import org.bukkit.entity.Player;
 
 public class GamePlayer {
-    private Player player;
+    private Player player = null;
     private int health = 10;
     private String[] effects;
 
 
-    //Setzt den Gameplayer direkt im Constructor
-    public GamePlayer(Player player) {
-        this.player = player;
-    }
+
 
     public Player getPlayer() {
         return this.player;
@@ -29,6 +26,12 @@ public class GamePlayer {
         this.health += change;
     }
 
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    public void removePlayer() {
+        this.player = null;
+    }
 
 
 }
