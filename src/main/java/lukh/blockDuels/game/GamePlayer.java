@@ -32,6 +32,12 @@ public class GamePlayer {
     public void removePlayer() {
         this.player = null;
     }
+    public void reset() {
+        this.health = 10;
+        this.player = null;
+        //TODO: Effect clear
+
+    }
 
 
 }

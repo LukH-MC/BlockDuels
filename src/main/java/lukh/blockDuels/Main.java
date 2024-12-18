@@ -3,6 +3,8 @@ package lukh.blockDuels;
 import lukh.blockDuels.commands.battle.addPlayer;
 import lukh.blockDuels.commands.battle.listPlayers;
 import lukh.blockDuels.commands.battle.removePlayer;
+import lukh.blockDuels.commands.game.startDuel;
+import lukh.blockDuels.game.Game;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.PluginCommand;
@@ -11,6 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 @SuppressWarnings("UnstableApiUsage")
 public final class Main extends JavaPlugin {
+    public Game game;
 
     @Override
     public void onEnable() {
@@ -22,6 +25,7 @@ public final class Main extends JavaPlugin {
         newCommand("addPlayer", new addPlayer());
         newCommand("removePlayer", new removePlayer());
         newCommand("listPlayers", new listPlayers());
+        newCommand("startDuel", new startDuel());
     }
 
     @Override

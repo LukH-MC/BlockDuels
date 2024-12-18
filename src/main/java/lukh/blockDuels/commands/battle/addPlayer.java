@@ -44,11 +44,15 @@ public class addPlayer implements CommandExecutor {
         if (Game.player1.getPlayer() == null) {
             Game.player1.setPlayer(Bukkit.getPlayer(args[0]));
             sender.sendMessage(args[0] + " has been entered to the game!");
+            //noinspection UsagesOfObsoleteApi
+            Bukkit.getPlayer(args[0]).sendMessage(DARK_AQUA + "You have been entered to the game!");
             return true;
         }
         if (Game.player2.getPlayer() == null && Game.player1.getPlayer() != null) {
             Game.player2.setPlayer(Bukkit.getPlayer(args[0]));
             sender.sendMessage(args[0] + " has been entered to the game!");
+            //noinspection UsagesOfObsoleteApi
+            Bukkit.getPlayer(args[0]).sendMessage(DARK_AQUA + "You have been entered to the game!");
             return true;
         }
 

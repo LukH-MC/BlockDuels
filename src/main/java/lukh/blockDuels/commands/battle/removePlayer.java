@@ -31,6 +31,7 @@ public class removePlayer implements CommandExecutor {
             if (args[0].equals(Game.player1.getPlayer().getName())) {
                 Game.player1.removePlayer();
                 commandSender.sendMessage("Player removed!");
+                Bukkit.getPlayer(args[0]).sendMessage(ChatColor.RED +"You have been removed from battle!");
                 return true;
             }
         }
@@ -38,6 +39,7 @@ public class removePlayer implements CommandExecutor {
             if (args[0].equals(Game.player2.getPlayer().getName())) {
                 Game.player2.removePlayer();
                 commandSender.sendMessage("Player removed!");
+                Bukkit.getPlayer(args[0]).sendMessage(ChatColor.RED +"You have been removed from battle!");
                 return true;
             }
         }
