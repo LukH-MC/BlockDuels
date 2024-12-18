@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/BlockDuels.main.iml" filepath="$PROJECT_DIR$/.idea/modules/BlockDuels.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lukh.BlockDuels.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lukh.BlockDuels.main.iml" />
     </modules>
   </component>
 </project>
