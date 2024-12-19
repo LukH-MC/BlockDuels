@@ -15,7 +15,7 @@ public class startDuel implements CommandExecutor {
             commandSender.sendMessage(ChatColor.RED + "You are missing players!");
             return false;
         }
-
+        Game.running = true;
         return true;
     }
 }
